@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="form-container">
+    <form id="multiStepForm">
+        <h1>Validation</h1>
+        <div class="step">
+            Name:
+            <input type="text" placeholder="First Name" class="form-control" id="firstName" required>
+            <input type="text" placeholder="Second Name" class="form-control" id="secondName" required>
+            <span class="error"></span>
+        </div>
+        <div class="step">
+            Contact info:
+            <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+            <input type="text" class="form-control" placeholder="Phone" id="phone" required>
+            <span class="error"></span>
+        </div>
+        <div class="step">
+            Name:
+            <input type="text" placeholder="User Name" class="form-control" id="userName" required>
+            <input type="password" placeholder="Password" class="form-control" id="password" required>
+            <span class="error"></span>
+        </div>
+        <div class="buttons">
+            <button type="button" class="btn btn-submit" id="prevBtn" onclick="move(-1)" style="display: none;">Previous</button>
+            <button type="button" class="btn btn-submit" id="nextBtn" onclick="move(1)">Next</button>
+        </div>
+        <div class="indicators">
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </form>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
